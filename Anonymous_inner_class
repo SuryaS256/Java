@@ -1,0 +1,29 @@
+package Study;
+
+class A
+{
+	public void show()
+	{
+		System.out.print("show method1");
+	}
+}
+public class Demo 
+{
+	public static void main(String[] args) 
+	{
+		A obj=new A()
+		{
+			public void show()
+			{
+				System.out.print("Show method2");
+			}
+		};		
+		obj.show();
+	}
+
+}
+
+		
+	
+
+
