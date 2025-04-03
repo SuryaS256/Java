@@ -1,0 +1,28 @@
+import java.sql.*;
+
+public class DemoJdbc {
+    public static void main(String[] args) {
+        // Corrected JDBC URL
+        String url = "jdbc:postgresql://localhost:5432/demo";
+        String uname = "postgres"; // Ensure this is your actual PostgreSQL username
+        String pass = "SURYAsmg256@"; // Ensure this is your correct password
+
+        try {
+            // Load PostgreSQL JDBC Driver
+            Class.forName("org.postgresql.Driver");
+
+            // Establish Connection
+            Connection con = DriverManager.getConnection(url, uname, pass);
+            System.out.println("Connected to the database successfully!");
+
+            // Close the connection
+            con.close();
+        } catch (ClassNotFoundException e) {
+            System.out.println("PostgreSQL JDBC Driver not found.");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Connection failed.");
+            e.printStackTrace();
+        }
+    }
+}
