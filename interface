@@ -1,0 +1,33 @@
+package Study;
+
+interface A
+{
+	void show();
+	void config();
+}
+class B implements A
+{
+	public void show()
+	{
+		System.out.println("Show method");
+	}
+	public void config()
+	{
+		System.out.println("Config method");
+	}
+}
+public class Demo  
+{
+	public static void main(String[] args) 
+	{
+		 B b1=new B();
+		 b1.show();
+		 b1.config();
+	}
+
+}
+
+		
+	
+
+
